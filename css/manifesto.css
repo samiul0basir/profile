@@ -1,0 +1,117 @@
+.manifesto {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: white;
+    padding: 5rem 2rem;
+}
+
+.manifesto-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    padding: 2rem;
+    border-bottom: 2px solid #ffd700;
+}
+
+.manifesto-header h2 {
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.manifesto-header p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.manifesto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.manifesto-point {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.manifesto-point:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.manifesto-point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #ffd700;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.manifesto-point:hover::before {
+    transform: scaleY(1);
+}
+
+.manifesto-point h3 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.manifesto-point p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.manifesto-footer {
+    text-align: center;
+    max-width: 800px;
+    margin: 4rem auto 0;
+    padding: 2rem;
+    border-top: 2px solid #ffd700;
+}
+
+.manifesto-footer h3 {
+    color: #ffd700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #ffd700;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .manifesto {
+        padding: 3rem 1rem;
+    }
+
+    .manifesto-header h2 {
+        font-size: 2rem;
+    }
+
+    .manifesto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .manifesto-point {
+        padding: 1.5rem;
+    }
+}
